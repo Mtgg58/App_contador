@@ -11,10 +11,10 @@ class InfoScreen extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Icon(Icons.account_circle, size: 80, color: Colors.blue),
+            Icon(Icons.account_circle, size: 80, color: const Color.fromARGB(255, 226, 33, 243)),
             SizedBox(height: 10),
-            Text('Tu Nombre Completo', style: TextStyle(fontSize: 22)),
-            Text('Estudiante de Ingeniería', style: TextStyle(fontSize: 16)),
+            Text('Nombre', style: TextStyle(fontSize: 22)),
+            Text('Ingeniero', style: TextStyle(fontSize: 16)),
             SizedBox(height: 30),
             ElevatedButton(
               child: Text('Regresar'),
