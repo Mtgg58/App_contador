@@ -13,9 +13,12 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Contador Principal'),
+        centerTitle: true, 
+        backgroundColor: Colors.blue.shade700, 
+        foregroundColor: Colors.white,
         actions: [
           IconButton(
-            icon: Icon(Icons.person),
+            icon: Icon(Icons.account_circle, size: 28), 
             onPressed: () {
               Navigator.pushNamed(context, '/info'); // Va a la info
             },
@@ -26,8 +29,12 @@ class _HomeScreenState extends State<HomeScreen> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Clicks realizados:', style: TextStyle(fontSize: 20)),
-            Text('$_contador', style: TextStyle(fontSize: 60)),
+            Text('Clicks realizados:', style: TextStyle(fontSize: 20, color: Colors.grey.shade600)),
+          
+            Text(
+              '$_contador', 
+              style: TextStyle(fontSize: 80, fontWeight: FontWeight.w300, color: Colors.blue.shade800)
+            ),
           ],
         ),
       ),
@@ -36,6 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
         children: [
           FloatingActionButton(
             heroTag: 'btnMenos',
+            backgroundColor: Colors.blue.shade700, 
+            foregroundColor: Colors.white,
             child: Icon(Icons.remove),
             onPressed: () {
               setState(() {
@@ -46,6 +55,8 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(width: 10),
           FloatingActionButton(
             heroTag: 'btnReset',
+            backgroundColor: Colors.blue.shade700,
+            foregroundColor: Colors.white,
             child: Icon(Icons.refresh),
             onPressed: () {
               setState(() {
@@ -56,6 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(width: 10),
           FloatingActionButton(
             heroTag: 'btnMas',
+            backgroundColor: Colors.blue.shade700,
+            foregroundColor: Colors.white,
             child: Icon(Icons.add),
             onPressed: () {
               setState(() {
